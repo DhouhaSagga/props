@@ -1,24 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
+import FullName from './Profile/Component/FullName';
+import Bio from './Profile/Component/Bio';
+import Profession from './Profile/Component/Profession';
 
 function App() {
+  const name="Dhouha Sagga"
+  const bio="Student"
+  const profession="FullStack Js"
+  const handlealert=(x)=>alert(x);
+  const img=[{img:"me.jpg"}]
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+   
+    <div style={{background:"beige" , border:"2px solid black", width:"550px", height:"500px", margin:"2% 30%"}}>
+   <FullName name={name} />
+   <Bio bio={bio} handlealert={handlealert} img={img}/>
+   <Profession profession={profession}/>
     </div>
+
   );
 }
 
